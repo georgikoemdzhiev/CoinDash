@@ -31,12 +31,15 @@ stretch_mode = 2
 
 [node name="LevelSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = 0.2
 
 [node name="CoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = 0.2
 
 [node name="EndSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = 0.2
 
 [connection signal="hurt" from="Player" to="." method="_on_Player_hurt"]
 [connection signal="pickup" from="Player" to="." method="_on_Player_pickup"]
