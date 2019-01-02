@@ -1,5 +1,5 @@
 # CoinDash
-CoinDash is a game made with ![Godot game engine](https://godotengine.org/). The main objective in the game is to collect as many coins as possible whthin the remaining time and inceasing your score. Every time you collect all of the coins your remaining time is increased by 5 seconds. 
+CoinDash is a game made with [Godot game engine](https://godotengine.org). The main objective in the game is to collect as many coins as possible whthin the remaining time and inceasing your score. Every time you collect all of the coins your remaining time is increased by 5 seconds. 
 
 ![CoinDash screenshot](https://user-images.githubusercontent.com/11027608/50591563-46f03800-0e88-11e9-88c7-0e1361535762.png)
 
