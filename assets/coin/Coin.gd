@@ -14,6 +14,9 @@ func _ready():
 		Color(1,1,1,1),
 		Color(1,1,1,0), 0.3,
 		Tween.TRANS_QUAD, Tween.EASE_IN_OUT)
+	
+	$ShimmerEffectTimer.wait_time = rand_range(3, 8)
+	$ShimmerEffectTimer.start()
 
 
 func pickup():
@@ -28,3 +31,8 @@ func _on_Coin_area_entered( area ):
 
 func _on_Tween_tween_completed(object, key):
 	queue_free()
+
+
+func _on_ShimmerEffectTimer_timeout():
+	$AnimatedSprite.frame = 0
+	$AnimatedSprite.play()

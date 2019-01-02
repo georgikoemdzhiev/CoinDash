@@ -3,7 +3,6 @@ extends Area2D
 var screensize
 
 func _ready():
-	$AnimatedSprite.frame = 0
 	$AnimatedSprite.play()
 	$Tween.interpolate_property($AnimatedSprite, 'scale', $AnimatedSprite.scale,
 								$AnimatedSprite.scale * 3, 0.3, Tween.TRANS_QUAD,
@@ -11,6 +10,8 @@ func _ready():
 	$Tween.interpolate_property($AnimatedSprite, 'modulate', Color(1, 1, 1, 1),
 								Color(1, 1, 1, 0), 0.3, Tween.TRANS_QUAD,
 								Tween.EASE_IN_OUT)
+	$ShimmerEffectTimer.wait_time = rand_range(3, 8)
+	$ShimmerEffectTimer.start()
 
 func pickup():
 	monitoring = false
@@ -25,3 +26,7 @@ func _on_Powerup_area_entered( area ):
 
 func _on_LifeTimer_timeout():
 	queue_free()
+
+func _on_ShimmerEffectTimer_timeout():
+	$AnimatedSprite.frame = 0
+	$AnimatedSprite.play()
