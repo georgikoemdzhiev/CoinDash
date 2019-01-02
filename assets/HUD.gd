@@ -5,7 +5,7 @@ signal start_game
 func update_score(score:int):
 	$MarginContainer/ScoreLabel.text = str(score)
 
-func update_time(time:int):
+func update_timer(time:int):
 	$MarginContainer/TimeLabel.text = str(time)
 
 func show_message(text:String):
