@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/grass.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/audio/Coin.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/audio/Hit.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/audio/Powerup.wav" type="AudioStream" id=8]
+[ext_resource path="res://Cactus.tscn" type="PackedScene" id=9]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -48,6 +49,9 @@ volume_db = 0.2
 
 [node name="PowerupTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Cactus" parent="." instance=ExtResource( 9 )]
+position = Vector2( 237.793, 205.484 )
 
 [connection signal="hurt" from="Player" to="." method="_on_Player_hurt"]
 [connection signal="pickup" from="Player" to="." method="_on_Player_pickup"]
